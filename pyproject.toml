@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-usage-budget"
+version = "0.1.0"
+description = "Daily caps and desktop alerts for your Claude weekly usage limit (Claude Code statusline)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Mickaël Moret" }]
+keywords = ["claude", "claude-code", "statusline", "usage", "rate-limit"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/<your-user>/claude-usage-budget"
+
+[project.scripts]
+claude-usage-budget = "claude_usage_budget.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["claude_usage_budget*"]

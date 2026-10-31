@@ -1,0 +1,8 @@
+{
+  "model": { "id": "claude-fable-5-1", "display_name": "Fable 5.1" },
+  "rate_limits": {
+    "five_hour": { "used_percentage": 0, "resets_at": null },
+    "seven_day": { "used_percentage": 38, "resets_at": "2026-11-07T08:00:00Z" },
+    "seven_day_fable": { "used_percentage": 12, "resets_at": "2026-11-07T08:00:00Z" }
+  }
+}

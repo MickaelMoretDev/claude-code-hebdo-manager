@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" font-family="Segoe UI, system-ui, sans-serif">
+<defs><filter id="s" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/></filter></defs>
+<rect x="10" y="8" width="400" height="100" rx="10" fill="#202020" filter="url(#s)"/>
+<rect x="30" y="30" width="44" height="44" rx="10" fill="#d97757"/>
+<text x="52" y="60" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">C</text>
+<text x="92" y="44" fill="#fff" font-size="15" font-weight="600">Claude — daily cap exceeded</text>
+<text x="92" y="68" fill="#c8c8c8" font-size="13">weekly usage 52% ≥ cap 45% (d2).</text>
+<text x="92" y="90" fill="#8a8a8a" font-size="11">Claude Usage Budget · now</text>
+</svg>
