@@ -9,7 +9,7 @@
 [![Windows · WSL · Linux · macOS](https://img.shields.io/badge/platforms-Windows%20%C2%B7%20WSL%20%C2%B7%20Linux%20%C2%B7%20macOS-blue)](#)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
-<img src="docs/statusline.svg" alt="Statusline in Claude Code" width="760">
+<img src="docs/statusline.png" alt="Statusline in Claude Code" width="760">
 
 </div>
 
@@ -29,7 +29,7 @@ number into a daily plan you can actually follow.
 - Zero dependencies, Python ≥ 3.8, English or French UI.
 
 <div align="center">
-<img src="docs/states.svg" alt="ok / warn / over states" width="760">
+<img src="docs/states.png" alt="ok / warn / over states" width="760">
 </div>
 
 ## 🚀 Quick start
@@ -58,7 +58,7 @@ test notification. Re-run it any time; `git pull` alone is enough for code updat
 > it from PowerShell. Windows notifications work from both.
 
 <div align="center">
-<img src="docs/toast.svg" alt="Windows toast notification" width="420">
+<img src="docs/toast.png" alt="Windows toast notification" width="420">
 </div>
 
 ## ⚙️ Set your daily caps
@@ -88,7 +88,7 @@ Set `"carry_overspend": false` if overspending should *not* shrink later days.
 Preview a whole week before living it:
 
 <div align="center">
-<img src="docs/simulate.svg" alt="simulate output" width="760">
+<img src="docs/simulate.png" alt="simulate output" width="760">
 </div>
 
 <details>

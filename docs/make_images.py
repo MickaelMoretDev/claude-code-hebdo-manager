@@ -1,4 +1,8 @@
-"""Generate the README illustrations (SVG, no dependency). Run: python3 docs/make_images.py"""
+"""Generate the README illustrations.
+
+Run: python3 docs/make_images.py
+Writes docs/*.svg (sources) and docs/*.png (used by the README — PNG so that the
+block glyphs render identically whatever font the reader's browser picks)."""
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -91,3 +95,36 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# --------------------------------------------------------------------------- #
+# PNG export (what the README uses — font-independent, identical on every host)
+# --------------------------------------------------------------------------- #
+
+def export_png(scale: int = 2) -> None:
+    """Rasterize each SVG with headless Chromium. Requires: pip install playwright."""
+    import asyncio
+
+    try:
+        from playwright.async_api import async_playwright
+    except ImportError:
+        print("playwright not installed — SVGs only (pip install playwright && playwright install chromium)")
+        return
+
+    async def run() -> None:
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            for svg in sorted(HERE.glob("*.svg")):
+                page = await browser.new_page(device_scale_factor=scale)
+                await page.goto(svg.resolve().as_uri())
+                el = await page.query_selector("svg")
+                await el.screenshot(path=str(svg.with_suffix(".png")), omit_background=True)
+                await page.close()
+                print("wrote", svg.with_suffix(".png").name)
+            await browser.close()
+
+    asyncio.run(run())
+
+
+if __name__ == "__main__":
+    export_png()
