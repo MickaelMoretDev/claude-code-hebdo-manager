@@ -1,6 +1,6 @@
 <div align="center">
 
-# claude-usage-budget
+# claude-code-hebdo-manager
 
 **Pace your Claude weekly usage limit — daily caps, adaptive margins, desktop alerts.**
 
@@ -8,6 +8,7 @@
 [![Zero dependencies](https://img.shields.io/badge/dependencies-none-success)](#)
 [![Windows · WSL · Linux · macOS](https://img.shields.io/badge/platforms-Windows%20%C2%B7%20WSL%20%C2%B7%20Linux%20%C2%B7%20macOS-blue)](#)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+[![GitHub](https://img.shields.io/badge/github-MickaelMoretDev%2Fclaude--code--hebdo--manager-181717?logo=github)](https://github.com/MickaelMoretDev/claude-code-hebdo-manager)
 
 <img src="docs/statusline.png" alt="Statusline in Claude Code" width="760">
 
@@ -16,7 +17,7 @@
 Anthropic removed the 5-hour limit on some plans. Great for long sessions — but now the
 only guardrail is the **weekly** one, and it's easy to burn half of it on day one.
 
-`claude-usage-budget` plugs into the Claude Code **statusline** and turns that single weekly
+The `claude-usage-budget` command (this repo) plugs into the Claude Code **statusline** and turns that single weekly
 number into a daily plan you can actually follow.
 
 ## ✨ Features
@@ -37,15 +38,15 @@ number into a daily plan you can actually follow.
 **WSL · Linux · macOS**
 
 ```bash
-git clone https://github.com/<your-user>/claude-usage-budget.git ~/claude-usage-budget
-cd ~ && bash claude-usage-budget/install.sh
+git clone https://github.com/MickaelMoretDev/claude-code-hebdo-manager.git ~/claude-code-hebdo-manager
+cd ~ && bash claude-code-hebdo-manager/install.sh
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-git clone https://github.com/<your-user>/claude-usage-budget.git "$env:USERPROFILE\claude-usage-budget"
-powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\claude-usage-budget\install.ps1"
+git clone https://github.com/MickaelMoretDev/claude-code-hebdo-manager.git "$env:USERPROFILE\claude-code-hebdo-manager"
+powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\claude-code-hebdo-manager\install.ps1"
 ```
 
 Restart Claude Code — the line appears at the bottom. That's it.
@@ -136,7 +137,7 @@ claude-usage-budget init [--lang fr] [--force] # write default config + settings
 <summary><b>Manual setup</b> (without the installer)</summary>
 
 ```bash
-pip install git+https://github.com/<your-user>/claude-usage-budget
+pip install git+https://github.com/MickaelMoretDev/claude-code-hebdo-manager
 claude-usage-budget init
 ```
 
@@ -182,8 +183,8 @@ compares with your cap, prints, and notifies once per threshold per week
 ## 🧹 Uninstall
 
 ```bash
-bash ~/claude-usage-budget/uninstall.sh          # WSL / Linux / macOS
-powershell -File "$env:USERPROFILE\claude-usage-budget\uninstall.ps1"   # Windows
+bash ~/claude-code-hebdo-manager/uninstall.sh          # WSL / Linux / macOS
+powershell -File "$env:USERPROFILE\claude-code-hebdo-manager\uninstall.ps1"   # Windows
 ```
 
 Removes the package and the `statusLine` entry; your config file is kept.

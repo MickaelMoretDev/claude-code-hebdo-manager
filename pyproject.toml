@@ -9,7 +9,7 @@ description = "Daily caps and desktop alerts for your Claude weekly usage limit 
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.8"
-authors = [{ name = "Mickaël Moret" }]
+authors = [{ name = "Mickaël Moret", email = "mickael51480@gmail.com" }]
 keywords = ["claude", "claude-code", "statusline", "usage", "rate-limit"]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -20,7 +20,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/<your-user>/claude-usage-budget"
+Homepage = "https://github.com/MickaelMoretDev/claude-code-hebdo-manager"
+Repository = "https://github.com/MickaelMoretDev/claude-code-hebdo-manager"
+Issues = "https://github.com/MickaelMoretDev/claude-code-hebdo-manager/issues"
 
 [project.scripts]
 claude-usage-budget = "claude_usage_budget.cli:main"
